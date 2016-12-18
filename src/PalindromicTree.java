@@ -11,7 +11,8 @@ public class PalindromicTree {
 
 	public String longestPalindromeSubstring(String S) {
 		int longest_palindrome_end = -1;
-		int length = 0; //by default, the longest palindromic substring is the empty string
+		int length = 0; // by default, the longest palindromic substring is the
+						// empty string
 		Node T = empty;
 		/*
 		 * T is the largest proper palindrome suffix for the current prefix
@@ -31,12 +32,7 @@ public class PalindromicTree {
 			Node newNode = null;
 			if (current == fictive) {
 				newNode = new Node(1);
-				try {
-					fictive.edges[S.charAt(i)] = newNode;
-				} catch (Exception e) {
-					System.out.println(i + " " + S.charAt(i));
-					throw (e);
-				}
+				fictive.edges[S.charAt(i)] = newNode;
 			} else {
 				newNode = new Node(current.length + 2);
 				current.edges[S.charAt(i)] = newNode;
