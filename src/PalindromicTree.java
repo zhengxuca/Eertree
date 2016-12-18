@@ -11,7 +11,7 @@ public class PalindromicTree {
 
 	public String longestPalindromeSubstring(String S) {
 		int longest_palindrome_end = -1;
-		int length = 0;
+		int length = 0; //by default, the longest palindromic substring is the empty string
 		Node T = empty;
 		/*
 		 * T is the largest proper palindrome suffix for the current prefix
